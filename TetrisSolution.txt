@@ -1,0 +1,57 @@
+//For single Responsibilty principle
+//I have done the separation of concern
+//Problem was tetrimino 
+//with 4 of orientation by rotation
+//And checking two tetrimino is same in
+//same or any of its state
+
+public abstract class Tetrimino{
+	List of List :string Tetris;
+	int state;
+}
+public DerivedTetrimino : Tetrimino{
+	public DerivedTetrimino(){
+			initializes the tetrimino;
+	}
+}
+public class ServiceRotate{
+	protected DerivedTetrimino tetris;
+	public ServiceRoate(DerivedTetrimino _tetris){
+			tetris = _tetris;
+	}
+	private DerivedTetrimino StateRotate90(DerivedTetrimino _tetris){
+		//rotate 90 degree
+		//state + 1
+		return  object
+	}
+	public DerivedTetrimin StateChange(int times){
+			for(int i = 1; i <= times;i++)
+					tetris = StateRotate90(tetris);
+		return tetris;			
+	}
+}
+public class ServiceEqualTetrisRotate{
+		protected DerivedTetrimino tetris1;
+		protected DerivedTetrimino tetris2;
+		protected ServiceRoatate rotateService;
+
+		public ServiceEqualTetrisRotate(DerivedTetrimino _tetris1,
+		DerivedTetrimino _tetris2,ServiceRoatate _rotateService){
+				tetris1 = _tetris1;
+				tetris2 = _tetris2;
+				rotateService = _rotateService(tetris2);
+		}
+		public bool EqualTetrisOnCurrentState(){
+				//logic two 2-d matrix of object
+				//if matches return true
+				//else false
+		}
+		public bool EqualAnyState(){
+			//	rotateService(tetris2);
+				for(int i = 1; i <= 4; i++)
+						if(EqualTetrisOnCurrentState(tetris1,rotateService.StateChange(i))
+								return true;
+				return false;
+		}
+	
+}
